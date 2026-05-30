@@ -8,7 +8,7 @@ const leaders = [
     name: 'Arjun Mehta',
     title: 'Chairman & Founder',
     description:
-      'With over 25 years in real estate, Arjun\'s vision has been the driving force behind Élysée\'s rise to prominence.',
+      "With over 25 years in real estate, Arjun's vision has been the driving force behind Shreshta's rise to prominence.",
     image: '/images/leader-1.jpg',
   },
   {

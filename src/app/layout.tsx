@@ -16,11 +16,11 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "ÉLYSÉE — Luxury Real Estate Developer | Crafting Timeless Destinations",
+  title: "SHRESHTA — Luxury Real Estate Developer | Crafting Timeless Destinations",
   description:
-    "Élysée is a premier luxury real estate developer crafting timeless destinations for future generations. Discover our signature residential projects across India.",
+    "Shreshta is a premier luxury real estate developer crafting timeless destinations for future generations. Discover our signature residential projects across India.",
   keywords: [
-    "Élysée",
+    "Shreshta",
     "luxury real estate",
     "premium residential",
     "luxury homes",
@@ -29,15 +29,15 @@ export const metadata: Metadata = {
     "Goa",
     "real estate developer",
   ],
-  authors: [{ name: "Élysée Developers" }],
+  authors: [{ name: "Shreshta Developers" }],
   icons: {
-    icon: "/logo.svg",
+    icon: "/favicon.ico",
   },
   openGraph: {
-    title: "ÉLYSÉE — Luxury Beyond Construction",
+    title: "SHRESHTA — Luxury Beyond Construction",
     description:
       "Building timeless destinations designed for future generations.",
-    siteName: "Élysée Developers",
+    siteName: "Shreshta Developers",
     type: "website",
   },
 };

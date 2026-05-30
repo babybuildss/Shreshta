@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Élysée Royal Residences',
+    title: 'Shreshta Royal Residences',
     location: 'Mumbai, Maharashtra',
     status: 'Ongoing',
     description:
@@ -26,7 +26,7 @@ const projects = [
     slug: 'sapphire-towers',
   },
   {
-    title: 'Élysée Riviera Villas',
+    title: 'Shreshta Riviera Villas',
     location: 'Goa, India',
     status: 'Ongoing',
     description:

@@ -35,13 +35,13 @@ const projectData: Record<string, {
   configTypes: string[];
 }> = {
   'royal-residences': {
-    title: 'Élysée Royal Residences',
+    title: 'Shreshta Royal Residences',
     location: 'Mumbai, Maharashtra',
     status: 'Ongoing',
     priceRange: '₹3.5 Cr - ₹12 Cr',
     tagline: 'Where the Skyline Meets the Sea',
     description:
-      'Rising majestically above the Mumbai skyline, Élysée Royal Residences offers an unparalleled living experience. Each residence is meticulously crafted with imported marble flooring, smart home automation, and private elevators. Floor-to-ceiling windows frame breathtaking panoramic views of the Arabian Sea, creating a living canvas that changes with every sunset. The project features exclusive 3 & 4 BHK configurations with world-class amenities, including an infinity pool, grand clubhouse, and landscaped gardens.',
+      'Rising majestically above the Mumbai skyline, Shreshta Royal Residences offers an unparalleled living experience. Each residence is meticulously crafted with imported marble flooring, smart home automation, and private elevators. Floor-to-ceiling windows frame breathtaking panoramic views of the Arabian Sea, creating a living canvas that changes with every sunset. The project features exclusive 3 & 4 BHK configurations with world-class amenities, including an infinity pool, grand clubhouse, and landscaped gardens.',
     heroImage: '/images/featured-1.jpg',
     galleryImages: ['/images/luxury-interior-1.jpg', '/images/luxury-interior-2.jpg', '/images/luxury-interior-3.jpg'],
     amenities: ['Infinity Pool', 'Grand Clubhouse', 'Private Gym', 'Landscaped Gardens', 'Children\'s Play Area', 'Concierge Service', 'Smart Home Automation', 'Private Elevators'],
@@ -63,13 +63,13 @@ const projectData: Record<string, {
     configTypes: ['2 BHK — 1,600 sq.ft.', '3 BHK — 2,400 sq.ft.', '3.5 BHK — 3,000 sq.ft.', '4 BHK Duplex — 4,200 sq.ft.'],
   },
   'riviera-villas': {
-    title: 'Élysée Riviera Villas',
+    title: 'Shreshta Riviera Villas',
     location: 'Goa, India',
     status: 'Ongoing',
     priceRange: '₹5 Cr - ₹15 Cr',
     tagline: 'Mediterranean Luxury on Indian Shores',
     description:
-      'Nestled along the pristine coastline of Goa, Élysée Riviera Villas bring Mediterranean-inspired architecture to India\'s most beloved beach destination. Each villa features a private pool, lush tropical gardens, and breathtaking ocean views. The Mediterranean design language blends seamlessly with Goan charm — terracotta roofs, whitewashed walls, and open courtyards create an atmosphere of relaxed elegance. With only 45 exclusive villas, privacy and exclusivity are guaranteed.',
+      'Nestled along the pristine coastline of Goa, Shreshta Riviera Villas bring Mediterranean-inspired architecture to India\'s most beloved beach destination. Each villa features a private pool, lush tropical gardens, and breathtaking ocean views. The Mediterranean design language blends seamlessly with Goan charm — terracotta roofs, whitewashed walls, and open courtyards create an atmosphere of relaxed elegance. With only 45 exclusive villas, privacy and exclusivity are guaranteed.',
     heroImage: '/images/featured-3.jpg',
     galleryImages: ['/images/lifestyle-1.jpg', '/images/lifestyle-2.jpg', '/images/amenity-garden.jpg'],
     amenities: ['Private Pool per Villa', 'Beach Club Access', 'Spa & Wellness Center', 'Water Sports Hub', 'Organic Farm', 'Concierge Service', 'Gated Community', '24/7 Security'],
@@ -139,7 +139,7 @@ export default function ProjectDetailPage() {
                 className="text-2xl md:text-3xl font-bold tracking-[0.15em] text-[#C8A96B]"
                 style={{ fontFamily: "'Manrope', serif" }}
               >
-                ÉLYSÉE
+                SHRESHTA
               </span>
             </Link>
             <Link
@@ -441,7 +441,7 @@ export default function ProjectDetailPage() {
                   </div>
                   <div className="flex items-center gap-3 text-white/60 text-sm">
                     <Mail size={16} className="text-[#C8A96B]" />
-                    info@elysee.com
+                    info@shreshta.com
                   </div>
                 </div>
               </div>
@@ -502,11 +502,11 @@ export default function ProjectDetailPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
           <Link href="/">
             <span className="text-xl font-bold tracking-[0.15em] text-[#C8A96B]" style={{ fontFamily: "'Manrope', serif" }}>
-              ÉLYSÉE
+              SHRESHTA
             </span>
           </Link>
           <p className="text-white/30 text-xs tracking-wider">
-            © {new Date().getFullYear()} Élysée Developers. All rights reserved.
+            © {new Date().getFullYear()} Shreshta Developers. All rights reserved.
           </p>
           <Link href="/" className="text-[#C8A96B] text-sm hover:text-[#D4B97A] transition-colors duration-300">
             Back to Home

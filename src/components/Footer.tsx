@@ -5,9 +5,9 @@ import { ArrowUp } from 'lucide-react';
 
 const footerLinks = {
   projects: [
-    { label: 'Élysée Royal Residences', href: '/projects/royal-residences' },
+    { label: 'Shreshta Royal Residences', href: '/projects/royal-residences' },
     { label: 'The Sapphire Towers', href: '/projects/sapphire-towers' },
-    { label: 'Élysée Riviera Villas', href: '/projects/riviera-villas' },
+    { label: 'Shreshta Riviera Villas', href: '/projects/riviera-villas' },
   ],
   company: [
     { label: 'About Us', href: '#about' },
@@ -49,7 +49,7 @@ export default function Footer() {
               className="text-2xl md:text-3xl font-bold tracking-[0.15em] text-[#C8A96B] block mb-6"
               style={{ fontFamily: "'Manrope', serif" }}
             >
-              ÉLYSÉE
+              SHRESHTA
             </span>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
               Crafting timeless destinations designed for future generations.
@@ -139,7 +139,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/30 text-xs tracking-wider">
-            © {new Date().getFullYear()} Élysée Developers. All rights reserved.
+            © {new Date().getFullYear()} Shreshta Developers. All rights reserved.
           </p>
           <p className="text-white/30 text-xs tracking-wider">
             Crafted with passion for excellence

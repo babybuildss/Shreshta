@@ -15,7 +15,7 @@ const features = [
     icon: Leaf,
     title: 'Sustainable Innovation',
     description:
-      'We believe luxury and sustainability go hand in hand. From green building certifications to energy-efficient designs, every Élysée project is built for the future.',
+      'We believe luxury and sustainability go hand in hand. From green building certifications to energy-efficient designs, every Shreshta project is built for the future.',
   },
   {
     icon: Crown,

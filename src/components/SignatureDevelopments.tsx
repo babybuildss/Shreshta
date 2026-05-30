@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const developments = [
   {
-    title: 'Élysée Horizon',
+    title: 'Shreshta Horizon',
     location: 'Pune, Maharashtra',
     image: '/images/featured-1.jpg',
     slug: 'horizon',
@@ -22,7 +22,7 @@ const developments = [
     slug: 'grand-meridian',
   },
   {
-    title: 'Élysée Waterfront',
+    title: 'Shreshta Waterfront',
     location: 'Kochi, Kerala',
     image: '/images/hero-bg.jpg',
     slug: 'waterfront',
@@ -34,7 +34,7 @@ const developments = [
     slug: 'ivory-heights',
   },
   {
-    title: 'Élysée Palm Villas',
+    title: 'Shreshta Palm Villas',
     location: 'Chennai, Tamil Nadu',
     image: '/images/lifestyle-1.jpg',
     slug: 'palm-villas',

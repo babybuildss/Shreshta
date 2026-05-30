@@ -20,7 +20,7 @@ export default function DeveloperIntro() {
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
                 src="/images/hero-bg.jpg"
-                alt="Élysée luxury development"
+                alt="Shreshta luxury development"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -62,7 +62,7 @@ export default function DeveloperIntro() {
                 className="text-[#1A1A1A]/70 leading-[1.8] mb-10 max-w-[520px]"
                 style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(0.9rem, 1.5vw, 1.05rem)' }}
               >
-                For nearly two decades, Élysée has been at the forefront of luxury real estate
+                For nearly two decades, Shreshta has been at the forefront of luxury real estate
                 development. Every project we undertake is a testament to our unwavering commitment
                 to architectural excellence, sustainable design, and creating spaces that transcend
                 ordinary living. Our vision is rooted in the belief that true luxury lies in the

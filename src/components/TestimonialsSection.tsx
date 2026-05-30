@@ -6,21 +6,21 @@ import { Quote } from 'lucide-react';
 const testimonials = [
   {
     quote:
-      'The attention to detail in our Élysée home is unlike anything we\'ve experienced. From the imported marble flooring to the smart home integration, every aspect reflects true luxury.',
+      'The attention to detail in our Shreshta home is unlike anything we\'ve experienced. From the imported marble flooring to the smart home integration, every aspect reflects true luxury.',
     name: 'Rajesh & Priya Sharma',
-    location: 'Élysée Royal Residences',
+    location: 'Shreshta Royal Residences',
   },
   {
     quote:
-      'Élysée didn\'t just build us a house — they crafted a lifestyle. The amenities, the community, the location — everything exceeds expectations.',
+      'Shreshta didn\'t just build us a house — they crafted a lifestyle. The amenities, the community, the location — everything exceeds expectations.',
     name: 'Vikram Mehta',
     location: 'The Sapphire Towers',
   },
   {
     quote:
-      'We\'ve owned several properties, but our Élysée villa in Goa is something truly special. It\'s where architecture meets paradise.',
+      'We\'ve owned several properties, but our Shreshta villa in Goa is something truly special. It\'s where architecture meets paradise.',
     name: 'Anita & Deepak Kapoor',
-    location: 'Élysée Riviera Villas',
+    location: 'Shreshta Riviera Villas',
   },
 ];
 

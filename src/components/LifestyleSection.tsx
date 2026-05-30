@@ -59,7 +59,7 @@ export default function LifestyleSection() {
               style={{ fontFamily: "'Inter', sans-serif", fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}
             >
               Experience a lifestyle that transcends the ordinary. From serene landscapes
-              to vibrant community spaces, every Élysée development is designed to nurture
+              to vibrant community spaces, every Shreshta development is designed to nurture
               the art of fine living.
             </p>
             <a
