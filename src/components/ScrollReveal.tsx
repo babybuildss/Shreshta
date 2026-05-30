@@ -32,19 +32,23 @@ export default function ScrollReveal({
     if (!el) return;
 
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
     if (prefersReduced) {
       gsap.set(el, { opacity: 1, x: 0, y: 0 });
       return;
     }
 
+    const effectiveDirection = isMobile && (direction === 'left' || direction === 'right') ? 'up' : direction;
+    const effectiveDistance = isMobile ? Math.min(distance, 30) : distance;
+
     const directionMap = {
-      up: { y: distance, x: 0 },
-      down: { y: -distance, x: 0 },
-      left: { x: distance, y: 0 },
-      right: { x: -distance, y: 0 },
+      up: { y: effectiveDistance, x: 0 },
+      down: { y: -effectiveDistance, x: 0 },
+      left: { x: effectiveDistance, y: 0 },
+      right: { x: -effectiveDistance, y: 0 },
     };
 
-    const from = directionMap[direction];
+    const from = directionMap[effectiveDirection];
 
     gsap.set(el, {
       opacity: 0,

@@ -95,7 +95,7 @@ export default function AmenitiesSection() {
                   {amenity.icon}
                 </div>
                 {/* Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 lg:p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 lg:p-8 translate-y-0 sm:translate-y-4 sm:group-hover:translate-y-0 transition-transform duration-500">
                   <h3
                     className="text-white font-semibold text-base sm:text-lg mb-1 sm:mb-2"
                     style={{ fontFamily: "'Manrope', sans-serif" }}
@@ -103,7 +103,7 @@ export default function AmenitiesSection() {
                     {amenity.title}
                   </h3>
                   <p
-                    className="text-white/60 text-xs sm:text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"
+                    className="text-white/60 text-xs sm:text-sm leading-relaxed opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500 delay-100 touch-reveal"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {amenity.description}

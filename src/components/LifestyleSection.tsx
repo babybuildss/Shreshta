@@ -5,10 +5,10 @@ import ScrollReveal from './ScrollReveal';
 
 export default function LifestyleSection() {
   return (
-    <section className="relative bg-[#111111] py-16 sm:py-20 lg:py-0" id="lifestyle">
+    <section className="relative bg-[#111111] py-16 sm:py-20 lg:py-0 min-h-[70vh] sm:min-h-0" id="lifestyle">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* Left image */}
-        <div className="relative h-[40vh] sm:h-[50vh] lg:h-auto lg:min-h-screen">
+        <div className="relative h-[35vh] min-h-[240px] sm:h-[45vh] lg:h-auto lg:min-h-screen">
           <ScrollReveal direction="left" duration={1.2}>
             <div className="relative w-full h-full overflow-hidden">
               <Image
@@ -24,7 +24,7 @@ export default function LifestyleSection() {
         </div>
 
         {/* Right image */}
-        <div className="relative h-[40vh] sm:h-[50vh] lg:min-h-screen">
+        <div className="relative h-[35vh] min-h-[240px] sm:h-[45vh] lg:min-h-screen">
           <ScrollReveal direction="right" duration={1.2}>
             <div className="relative w-full h-full overflow-hidden">
               <Image
@@ -41,9 +41,9 @@ export default function LifestyleSection() {
       </div>
 
       {/* Overlay text */}
-      <div className="absolute inset-0 flex items-center justify-center z-10">
-        <ScrollReveal direction="up" delay={0.3} className="text-center px-4 sm:px-6">
-          <div className="bg-black/50 backdrop-blur-sm px-6 sm:px-10 md:px-16 py-8 sm:py-12 md:py-16 max-w-xl sm:max-w-2xl">
+      <div className="absolute inset-0 flex items-center justify-center z-10 px-4 sm:px-6">
+        <ScrollReveal direction="up" delay={0.3} className="text-center w-full max-w-lg sm:max-w-2xl">
+          <div className="bg-black/60 backdrop-blur-sm px-5 sm:px-10 md:px-16 py-6 sm:py-12 md:py-16 mx-auto">
             <h2
               className="text-white font-bold leading-tight mb-4 sm:mb-6"
               style={{

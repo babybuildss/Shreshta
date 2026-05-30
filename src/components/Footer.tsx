@@ -92,9 +92,9 @@ export default function Footer() {
       <div className="h-[1px] bg-gradient-to-r from-transparent via-[#C8A96B] to-transparent" />
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16 lg:py-20">
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-8 lg:gap-8">
           {/* Logo & Description */}
-          <div className="col-span-2 sm:col-span-2 lg:col-span-1">
+          <div className="sm:col-span-2 lg:col-span-1">
             <a href="#" className="inline-block mb-4 sm:mb-6">
               <span
                 className="text-2xl md:text-3xl font-bold tracking-[0.15em] text-[#C8A96B] block"
@@ -214,7 +214,7 @@ export default function Footer() {
       {/* Back to top */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-6 right-4 sm:bottom-8 sm:right-8 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#C8A96B] text-[#111111] flex items-center justify-center shadow-lg transition-all duration-500 hover:bg-[#D4B97A] ${
+        className={`fixed bottom-5 right-4 sm:bottom-8 sm:right-8 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#C8A96B] text-[#111111] flex items-center justify-center shadow-lg transition-all duration-500 hover:bg-[#D4B97A] safe-bottom ${
           showTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
         }`}
         aria-label="Scroll to top"

@@ -74,15 +74,10 @@ export default function FeaturedProjects() {
             className="mb-10 sm:mb-16 lg:mb-28 last:mb-0"
           >
             <div
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center ${
-                project.reverse ? 'lg:direction-rtl' : ''
-              }`}
-              style={{
-                direction: project.reverse ? 'rtl' : 'ltr',
-              }}
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center`}
             >
               {/* Image */}
-              <div className="relative overflow-hidden aspect-[16/10] sm:aspect-[16/10]" style={{ direction: 'ltr' }}>
+              <div className={`relative overflow-hidden aspect-[16/10] ${project.reverse ? 'lg:order-2' : 'lg:order-1'}`}>
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -108,7 +103,7 @@ export default function FeaturedProjects() {
               </div>
 
               {/* Text content */}
-              <div style={{ direction: 'ltr' }}>
+              <div className={project.reverse ? 'lg:order-1' : 'lg:order-2'}>
                 <p
                   className="text-[#C8A96B] text-sm tracking-[0.15em] uppercase font-medium mb-3"
                   style={{ fontFamily: "'Inter', sans-serif" }}

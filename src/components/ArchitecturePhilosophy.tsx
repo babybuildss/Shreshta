@@ -27,7 +27,7 @@ const features = [
 
 export default function ArchitecturePhilosophy() {
   return (
-    <section className="bg-[#FAF9F6] py-20 lg:py-32" id="philosophy">
+    <section className="bg-[#FAF9F6] py-16 sm:py-20 lg:py-32" id="philosophy">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16">
           {/* Left: Image — 60% width (3 cols) */}
@@ -76,9 +76,9 @@ export default function ArchitecturePhilosophy() {
             <div className="space-y-8">
               {features.map((feature, index) => (
                 <ScrollReveal key={feature.title} direction="right" delay={0.4 + index * 0.15}>
-                  <div className="flex gap-5">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full border border-[#C8A96B]/30 flex items-center justify-center">
-                      <feature.icon className="text-[#C8A96B]" size={20} />
+                  <div className="flex gap-4 sm:gap-5">
+                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-[#C8A96B]/30 flex items-center justify-center">
+                      <feature.icon className="text-[#C8A96B]" size={18} />
                     </div>
                     <div>
                       <h4

@@ -131,12 +131,12 @@ export default function ProjectDetailPage() {
   return (
     <main className="bg-[#FAF9F6]">
       {/* Navigation */}
-      <div className="fixed top-0 left-0 right-0 z-50 glass-nav shadow-lg shadow-black/10">
+      <div className="fixed top-0 left-0 right-0 z-50 glass-nav shadow-lg shadow-black/10 safe-top">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16 sm:h-20">
             <Link href="/">
               <span
-                className="text-2xl md:text-3xl font-bold tracking-[0.15em] text-[#C8A96B]"
+                className="text-xl sm:text-2xl md:text-3xl font-bold tracking-[0.12em] sm:tracking-[0.15em] text-[#C8A96B]"
                 style={{ fontFamily: "'Manrope', serif" }}
               >
                 SHRESHTA
@@ -153,7 +153,7 @@ export default function ProjectDetailPage() {
       </div>
 
       {/* Hero Banner */}
-      <section className="relative h-[60vh] lg:h-[80vh] mt-20">
+      <section className="relative h-[50vh] min-h-[320px] sm:h-[60vh] lg:h-[80vh] mt-16 sm:mt-20">
         <Image
           src={project.heroImage}
           alt={project.title}
@@ -164,7 +164,7 @@ export default function ProjectDetailPage() {
           quality={90}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
-        <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-16">
+        <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8 lg:p-16">
           <div className="max-w-[1400px] mx-auto">
             <ScrollReveal direction="up">
               <span
@@ -191,7 +191,7 @@ export default function ProjectDetailPage() {
               <p className="text-[#C8A96B] text-lg lg:text-xl mb-4" style={{ fontFamily: "'Inter', sans-serif" }}>
                 {project.tagline}
               </p>
-              <div className="flex flex-wrap items-center gap-6 text-white/60 text-sm">
+              <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-3 sm:gap-6 text-white/60 text-sm">
                 <span className="flex items-center gap-2">
                   <MapPin size={16} className="text-[#C8A96B]" />
                   {project.location}
@@ -249,7 +249,7 @@ export default function ProjectDetailPage() {
 
             {/* Price & Quick Info */}
             <ScrollReveal direction="right" delay={0.2}>
-              <div className="bg-[#111111] p-8 lg:p-10 text-white">
+              <div className="bg-[#111111] p-6 sm:p-8 lg:p-10 text-white">
                 <h3
                   className="text-white font-semibold text-xl mb-8"
                   style={{ fontFamily: "'Manrope', sans-serif" }}
@@ -259,7 +259,7 @@ export default function ProjectDetailPage() {
                 <div className="space-y-6">
                   <div className="border-b border-white/10 pb-6">
                     <p className="text-white/40 text-xs tracking-[0.15em] uppercase mb-2">Price Range</p>
-                    <p className="text-[#C8A96B] text-2xl font-bold" style={{ fontFamily: "'Manrope', sans-serif" }}>
+                    <p className="text-[#C8A96B] text-xl sm:text-2xl font-bold" style={{ fontFamily: "'Manrope', sans-serif" }}>
                       {project.priceRange}
                     </p>
                   </div>
@@ -354,15 +354,15 @@ export default function ProjectDetailPage() {
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
             {project.amenities.map((amenity, index) => {
               const IconComp = amenityIcons[amenity] || Building2;
               return (
                 <ScrollReveal key={amenity} direction="up" delay={index * 0.08}>
-                  <div className="p-6 border border-white/10 hover:border-[#C8A96B]/20 transition-colors duration-300 text-center group">
-                    <IconComp className="text-[#C8A96B] mx-auto mb-3" size={24} />
+                  <div className="p-4 sm:p-6 border border-white/10 hover:border-[#C8A96B]/20 transition-colors duration-300 text-center group h-full">
+                    <IconComp className="text-[#C8A96B] mx-auto mb-2 sm:mb-3" size={22} />
                     <p
-                      className="text-white/80 text-sm font-medium group-hover:text-[#C8A96B] transition-colors duration-300"
+                      className="text-white/80 text-xs sm:text-sm font-medium group-hover:text-[#C8A96B] transition-colors duration-300 leading-snug"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
                       {amenity}

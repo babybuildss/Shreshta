@@ -167,9 +167,9 @@ export default function Navigation() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-40 bg-[#111111] flex flex-col items-center justify-center"
+            className="fixed inset-0 z-40 bg-[#111111] flex flex-col items-center justify-center px-6 safe-top safe-bottom"
           >
-            <div className="flex flex-col items-center gap-8">
+            <div className="flex flex-col items-center gap-6 sm:gap-8">
               {navLinks.map((link, i) => (
                 <motion.a
                   key={link.label}
@@ -179,7 +179,7 @@ export default function Navigation() {
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   onClick={() => setMobileOpen(false)}
-                  className="text-3xl font-bold tracking-[0.1em] uppercase text-white hover:text-[#C8A96B] transition-colors duration-300"
+                  className="text-2xl sm:text-3xl font-bold tracking-[0.1em] uppercase text-white hover:text-[#C8A96B] transition-colors duration-300"
                   style={{ fontFamily: "'Manrope', sans-serif" }}
                 >
                   {link.label}

@@ -26,7 +26,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-[#111111] py-20 lg:py-32">
+    <section className="bg-[#111111] py-16 sm:py-20 lg:py-32">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section header */}
         <ScrollReveal direction="up" className="text-center mb-16 lg:mb-20">
@@ -50,14 +50,14 @@ export default function TestimonialsSection() {
         </ScrollReveal>
 
         {/* Testimonials grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {testimonials.map((testimonial, index) => (
             <ScrollReveal
               key={testimonial.name}
               direction="up"
               delay={index * 0.15}
             >
-              <div className="group p-8 lg:p-10 border border-white/10 hover:border-[#C8A96B]/20 transition-all duration-500 h-full flex flex-col">
+              <div className="group p-6 sm:p-8 lg:p-10 border border-white/10 hover:border-[#C8A96B]/20 transition-all duration-500 h-full flex flex-col">
                 {/* Gold quote icon */}
                 <Quote className="text-[#C8A96B]/40 mb-6 group-hover:text-[#C8A96B]/70 transition-colors duration-500" size={36} />
 

@@ -141,6 +141,8 @@ html.lenis body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -194,6 +196,22 @@ html.lenis body {
 
   .letter-tighter {
     letter-spacing: -0.05em;
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+/* Touch devices: show hover-only content without requiring hover */
+@media (hover: none) and (pointer: coarse) {
+  .group .touch-reveal {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
   }
 }
 

@@ -67,7 +67,7 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 
 export default function StatisticsSection() {
   return (
-    <section className="relative bg-[#111111] py-20 lg:py-32 overflow-hidden">
+    <section className="relative bg-[#111111] py-16 sm:py-20 lg:py-32 overflow-hidden">
       {/* Background gradient effect */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-radial from-[#C8A96B]/10 to-transparent" />
@@ -90,7 +90,7 @@ export default function StatisticsSection() {
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
           {stats.map((stat, index) => (
             <ScrollReveal
               key={stat.label}
@@ -111,7 +111,7 @@ export default function StatisticsSection() {
                 </span>
               </div>
               <p
-                className="text-white/50 text-sm tracking-[0.1em] uppercase font-medium"
+                className="text-white/50 text-[10px] sm:text-xs md:text-sm tracking-[0.08em] sm:tracking-[0.1em] uppercase font-medium leading-snug px-1"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 {stat.label}

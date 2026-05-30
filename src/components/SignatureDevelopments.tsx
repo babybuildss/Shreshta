@@ -55,7 +55,8 @@ export default function SignatureDevelopments() {
 
     // Duplicate items for infinite loop
     const totalWidth = track.scrollWidth / 2;
-    const duration = 30; // seconds for full loop
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+    const duration = isMobile ? 45 : 30; // slower on mobile for readability
 
     animationRef.current = gsap.to(track, {
       x: -totalWidth,
@@ -136,7 +137,7 @@ export default function SignatureDevelopments() {
           {developments.map((dev) => (
             <div
               key={dev.title}
-              className="flex-shrink-0 w-[80vw] sm:w-[60vw] md:w-[45vw] lg:w-[38vw] xl:w-[32vw] group cursor-pointer"
+              className="flex-shrink-0 w-[85vw] sm:w-[60vw] md:w-[45vw] lg:w-[38vw] xl:w-[32vw] group cursor-pointer"
             >
               <div className="relative overflow-hidden aspect-[4/3]">
                 <Image
@@ -178,7 +179,7 @@ export default function SignatureDevelopments() {
           {developments.map((dev) => (
             <div
               key={`dup-${dev.title}`}
-              className="flex-shrink-0 w-[80vw] sm:w-[60vw] md:w-[45vw] lg:w-[38vw] xl:w-[32vw] group cursor-pointer"
+              className="flex-shrink-0 w-[85vw] sm:w-[60vw] md:w-[45vw] lg:w-[38vw] xl:w-[32vw] group cursor-pointer"
             >
               <div className="relative overflow-hidden aspect-[4/3]">
                 <Image

@@ -30,7 +30,7 @@ const leaders = [
 
 export default function LeadershipSection() {
   return (
-    <section className="bg-[#FAF9F6] py-20 lg:py-32" id="leadership">
+    <section className="bg-[#FAF9F6] py-16 sm:py-20 lg:py-32" id="leadership">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section header */}
         <ScrollReveal direction="up" className="text-center mb-16 lg:mb-20">
@@ -54,7 +54,7 @@ export default function LeadershipSection() {
         </ScrollReveal>
 
         {/* Leaders grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {leaders.map((leader, index) => (
             <ScrollReveal
               key={leader.name}

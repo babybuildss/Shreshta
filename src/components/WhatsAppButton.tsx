@@ -35,7 +35,7 @@ export default function WhatsAppButton() {
       href={`https://wa.me/${phoneNumber}?text=${message}`}
       target="_blank"
       rel="noopener noreferrer"
-      className={`fixed bottom-6 left-4 sm:bottom-8 sm:left-8 z-40 transition-all duration-500 ${
+      className={`fixed bottom-5 left-4 sm:bottom-8 sm:left-8 z-40 transition-all duration-500 safe-bottom ${
         isVisible
           ? 'opacity-100 translate-y-0'
           : 'opacity-0 translate-y-8 pointer-events-none'
@@ -46,7 +46,7 @@ export default function WhatsAppButton() {
     >
       {/* Tooltip */}
       <div
-        className={`absolute bottom-full left-0 mb-3 ml-1 px-4 py-2.5 bg-white text-[#111111] rounded-lg shadow-xl whitespace-nowrap transition-all duration-300 text-sm font-medium ${
+        className={`absolute bottom-full left-0 mb-3 ml-1 px-3 sm:px-4 py-2 sm:py-2.5 bg-white text-[#111111] rounded-lg shadow-xl whitespace-nowrap transition-all duration-300 text-xs sm:text-sm font-medium max-w-[calc(100vw-6rem)] sm:max-w-none truncate sm:truncate-none ${
           isTooltipVisible
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-2 pointer-events-none'

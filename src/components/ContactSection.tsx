@@ -76,8 +76,8 @@ export default function ContactSection() {
     'block text-xs tracking-[0.15em] uppercase font-medium text-[#1A1A1A]/50 mb-2';
 
   return (
-    <section className="bg-[#111111] py-20 lg:py-32" id="contact">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="bg-[#111111] py-16 sm:py-20 lg:py-32" id="contact">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         {/* Contact grid */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
           {/* Left panel — 40% */}
@@ -122,7 +122,7 @@ export default function ContactSection() {
                   <div className="w-10 h-10 rounded-full border border-[#C8A96B]/20 flex items-center justify-center flex-shrink-0 group-hover:border-[#C8A96B]/60 transition-colors duration-300">
                     <MapPin className="text-[#C8A96B]" size={16} />
                   </div>
-                  <span className="text-white/70 text-sm group-hover:text-white transition-colors duration-300" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <span className="text-white/70 text-sm group-hover:text-white transition-colors duration-300 break-words" style={{ fontFamily: "'Inter', sans-serif" }}>
                     Shreshta Tower, Nariman Point, Mumbai 400021
                   </span>
                 </a>
@@ -133,7 +133,7 @@ export default function ContactSection() {
                   <div className="w-10 h-10 rounded-full border border-[#C8A96B]/20 flex items-center justify-center flex-shrink-0 group-hover:border-[#C8A96B]/60 transition-colors duration-300">
                     <Phone className="text-[#C8A96B]" size={16} />
                   </div>
-                  <span className="text-white/70 text-sm group-hover:text-white transition-colors duration-300" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <span className="text-white/70 text-sm group-hover:text-white transition-colors duration-300 break-words" style={{ fontFamily: "'Inter', sans-serif" }}>
                     +91 22 4000 5000
                   </span>
                 </a>
@@ -144,7 +144,7 @@ export default function ContactSection() {
                   <div className="w-10 h-10 rounded-full border border-[#C8A96B]/20 flex items-center justify-center flex-shrink-0 group-hover:border-[#C8A96B]/60 transition-colors duration-300">
                     <Mail className="text-[#C8A96B]" size={16} />
                   </div>
-                  <span className="text-white/70 text-sm group-hover:text-white transition-colors duration-300" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <span className="text-white/70 text-sm group-hover:text-white transition-colors duration-300 break-words" style={{ fontFamily: "'Inter', sans-serif" }}>
                     info@shreshta.com
                   </span>
                 </a>
@@ -191,7 +191,7 @@ export default function ContactSection() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-8">
                   <h3
-                    className="text-[#1A1A1A] font-semibold text-2xl mb-8"
+                    className="text-[#1A1A1A] font-semibold text-xl sm:text-2xl mb-6 sm:mb-8"
                     style={{ fontFamily: "'Manrope', sans-serif" }}
                   >
                     Schedule a Consultation
@@ -309,13 +309,13 @@ export default function ContactSection() {
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
             width="100%"
-            height="400"
+            height="280"
             style={{ border: 0, filter: 'grayscale(1) invert(0.92) contrast(0.85)' }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="Shreshta Developers Location - Mumbai, India"
-            className="w-full"
+            className="w-full sm:h-[350px] lg:h-[400px]"
           />
         </div>
       </div>

@@ -12,7 +12,7 @@ const keyValues = [
 
 export default function DeveloperIntro() {
   return (
-    <section className="bg-[#FAF9F6] py-20 lg:py-32" id="about">
+    <section className="bg-[#FAF9F6] py-16 sm:py-20 lg:py-32" id="about">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Image */}
@@ -35,9 +35,9 @@ export default function DeveloperIntro() {
           {/* Right: Content */}
           <div>
             <ScrollReveal direction="right" delay={0.2}>
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex items-center gap-4 mb-6 flex-wrap">
                 <div className="gold-line" />
-                <span className="text-[#C8A96B] text-xs tracking-[0.2em] uppercase font-semibold">
+                <span className="text-[#C8A96B] text-[10px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase font-semibold">
                   Est. 2005 — Three Decades of Excellence
                 </span>
               </div>

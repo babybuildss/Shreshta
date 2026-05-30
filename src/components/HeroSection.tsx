@@ -88,7 +88,7 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full h-screen overflow-hidden bg-[#111111]"
+      className="relative w-full min-h-[100svh] h-[100dvh] max-h-[900px] sm:max-h-none sm:h-screen overflow-hidden bg-[#111111]"
       id="hero"
     >
       {/* Auto-slideshow — 6 premium AI-generated exterior images */}
@@ -103,7 +103,7 @@ export default function HeroSection() {
             src={slide.src}
             alt={slide.alt}
             fill
-            className="object-cover scale-110"
+            className="object-cover scale-105 sm:scale-110"
             priority={index === 0}
             sizes="100vw"
             quality={90}
@@ -178,7 +178,7 @@ export default function HeroSection() {
       </div>
 
       {/* Slide progress dots */}
-      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3">
+      <div className="absolute bottom-20 sm:bottom-24 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 sm:gap-3">
         {heroSlides.map((_, index) => (
           <button
             key={index}
@@ -193,8 +193,8 @@ export default function HeroSection() {
         ))}
       </div>
 
-      {/* Slide counter */}
-      <div className="absolute bottom-[5.5rem] right-6 sm:right-10 z-10 flex items-center gap-1">
+      {/* Slide counter — hidden on very small screens */}
+      <div className="absolute bottom-[4.5rem] sm:bottom-[5.5rem] right-4 sm:right-10 z-10 hidden sm:flex items-center gap-1">
         <span className="text-[#C8A96B] text-sm font-semibold" style={{ fontFamily: "'Inter', sans-serif" }}>
           {String(activeSlide + 1).padStart(2, '0')}
         </span>
@@ -204,7 +204,7 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 sm:gap-2">
         <span className="text-white/40 text-[10px] sm:text-xs tracking-[0.2em] uppercase" style={{ fontFamily: "'Inter', sans-serif" }}>
           Scroll
         </span>
