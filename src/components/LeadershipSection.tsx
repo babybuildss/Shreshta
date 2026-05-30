@@ -31,7 +31,7 @@ const leaders = [
 export default function LeadershipSection() {
   return (
     <section className="bg-[#FAF9F6] py-20 lg:py-32" id="leadership">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section header */}
         <ScrollReveal direction="up" className="text-center mb-16 lg:mb-20">
           <div className="flex items-center justify-center gap-4 mb-4">

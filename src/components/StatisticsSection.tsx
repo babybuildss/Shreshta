@@ -73,7 +73,7 @@ export default function StatisticsSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-radial from-[#C8A96B]/10 to-transparent" />
       </div>
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         <ScrollReveal direction="up" className="text-center mb-16 lg:mb-20">
           <h2
             className="text-white font-bold mb-4"

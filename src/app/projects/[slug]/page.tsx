@@ -132,7 +132,7 @@ export default function ProjectDetailPage() {
     <main className="bg-[#FAF9F6]">
       {/* Navigation */}
       <div className="fixed top-0 left-0 right-0 z-50 glass-nav shadow-lg shadow-black/10">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
           <div className="flex items-center justify-between h-20">
             <Link href="/">
               <span
@@ -208,7 +208,7 @@ export default function ProjectDetailPage() {
 
       {/* Project Info */}
       <section className="py-16 lg:py-24">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
             {/* Description */}
             <ScrollReveal direction="up" className="lg:col-span-2">
@@ -304,7 +304,7 @@ export default function ProjectDetailPage() {
 
       {/* Gallery */}
       <section className="bg-[#FAF9F6] py-16 lg:py-24">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
           <ScrollReveal direction="up">
             <div className="flex items-center gap-4 mb-10">
               <div className="gold-line" />
@@ -334,7 +334,7 @@ export default function ProjectDetailPage() {
 
       {/* Amenities */}
       <section className="bg-[#111111] py-16 lg:py-24">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
           <ScrollReveal direction="up" className="text-center mb-12">
             <div className="flex items-center justify-center gap-4 mb-4">
               <div className="gold-line" />
@@ -377,7 +377,7 @@ export default function ProjectDetailPage() {
 
       {/* Location Advantages */}
       <section className="bg-[#FAF9F6] py-16 lg:py-24">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
           <ScrollReveal direction="up">
             <div className="flex items-center gap-4 mb-10">
               <div className="gold-line" />
@@ -413,7 +413,7 @@ export default function ProjectDetailPage() {
 
       {/* Inquiry Form */}
       <section className="bg-[#111111] py-16 lg:py-24" id="inquiry">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             <ScrollReveal direction="left">
               <div>
@@ -501,7 +501,7 @@ export default function ProjectDetailPage() {
       {/* Footer */}
       <footer className="bg-[#111111] text-white">
         <div className="h-[1px] bg-gradient-to-r from-transparent via-[#C8A96B] to-transparent" />
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
           <Link href="/">
             <span className="text-xl font-bold tracking-[0.15em] text-[#C8A96B]" style={{ fontFamily: "'Manrope', serif" }}>
               SHRESHTA

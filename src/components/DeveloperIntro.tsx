@@ -13,7 +13,7 @@ const keyValues = [
 export default function DeveloperIntro() {
   return (
     <section className="bg-[#FAF9F6] py-20 lg:py-32" id="about">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Image */}
           <ScrollReveal direction="left" duration={1.2}>

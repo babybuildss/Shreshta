@@ -28,7 +28,7 @@ const features = [
 export default function ArchitecturePhilosophy() {
   return (
     <section className="bg-[#FAF9F6] py-20 lg:py-32" id="philosophy">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16">
           {/* Left: Image — 60% width (3 cols) */}
           <ScrollReveal direction="left" duration={1.2} className="lg:col-span-3">
