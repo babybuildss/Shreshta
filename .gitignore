@@ -52,3 +52,13 @@ prompt
 server.log
 # Skills directory
 /skills/
+
+# template / dev artifacts
+.zscripts/
+upload/
+worklog.md
+download/
+examples/
+mini-services/
+db/
+Caddyfile
