@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
 
 const footerLinks = {
@@ -26,11 +26,13 @@ const footerLinks = {
 export default function Footer() {
   const [showTop, setShowTop] = useState(false);
 
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', () => {
+  useEffect(() => {
+    const handleScroll = () => {
       setShowTop(window.scrollY > 500);
-    });
-  }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -41,12 +43,12 @@ export default function Footer() {
       {/* Gold top border */}
       <div className="h-[1px] bg-gradient-to-r from-transparent via-[#C8A96B] to-transparent" />
 
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8">
           {/* Logo & Description */}
-          <div className="lg:col-span-1">
+          <div className="col-span-2 sm:col-span-2 lg:col-span-1">
             <span
-              className="text-2xl md:text-3xl font-bold tracking-[0.15em] text-[#C8A96B] block mb-6"
+              className="text-2xl md:text-3xl font-bold tracking-[0.15em] text-[#C8A96B] block mb-4 sm:mb-6"
               style={{ fontFamily: "'Manrope', serif" }}
             >
               SHRESHTA
@@ -60,17 +62,17 @@ export default function Footer() {
           {/* Projects Links */}
           <div>
             <h4
-              className="text-sm tracking-[0.15em] uppercase text-[#C8A96B] mb-6 font-semibold"
+              className="text-xs sm:text-sm tracking-[0.15em] uppercase text-[#C8A96B] mb-4 sm:mb-6 font-semibold"
               style={{ fontFamily: "'Manrope', sans-serif" }}
             >
               Projects
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               {footerLinks.projects.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-white/50 text-sm hover:text-white transition-colors duration-300"
+                    className="text-white/50 text-xs sm:text-sm hover:text-white transition-colors duration-300"
                   >
                     {link.label}
                   </a>
@@ -82,17 +84,17 @@ export default function Footer() {
           {/* Company Links */}
           <div>
             <h4
-              className="text-sm tracking-[0.15em] uppercase text-[#C8A96B] mb-6 font-semibold"
+              className="text-xs sm:text-sm tracking-[0.15em] uppercase text-[#C8A96B] mb-4 sm:mb-6 font-semibold"
               style={{ fontFamily: "'Manrope', sans-serif" }}
             >
               Company
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-white/50 text-sm hover:text-white transition-colors duration-300"
+                    className="text-white/50 text-xs sm:text-sm hover:text-white transition-colors duration-300"
                   >
                     {link.label}
                   </a>
@@ -104,30 +106,30 @@ export default function Footer() {
           {/* Resources & Social */}
           <div>
             <h4
-              className="text-sm tracking-[0.15em] uppercase text-[#C8A96B] mb-6 font-semibold"
+              className="text-xs sm:text-sm tracking-[0.15em] uppercase text-[#C8A96B] mb-4 sm:mb-6 font-semibold"
               style={{ fontFamily: "'Manrope', sans-serif" }}
             >
               Resources
             </h4>
-            <ul className="space-y-3 mb-8">
+            <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
               {footerLinks.resources.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-white/50 text-sm hover:text-white transition-colors duration-300"
+                    className="text-white/50 text-xs sm:text-sm hover:text-white transition-colors duration-300"
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
             </ul>
-            {/* Social icons placeholder */}
-            <div className="flex gap-4">
+            {/* Social icons */}
+            <div className="flex gap-3 sm:gap-4">
               {['FB', 'TW', 'IG', 'LI'].map((social) => (
                 <a
                   key={social}
                   href="#"
-                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/50 text-xs hover:border-[#C8A96B] hover:text-[#C8A96B] transition-all duration-300"
+                  className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/20 flex items-center justify-center text-white/50 text-[10px] sm:text-xs hover:border-[#C8A96B] hover:text-[#C8A96B] transition-all duration-300"
                 >
                   {social}
                 </a>
@@ -137,12 +139,20 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/30 text-xs tracking-wider">
+        <div className="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+          <p className="text-white/30 text-[10px] sm:text-xs tracking-wider">
             © {new Date().getFullYear()} Shreshta Developers. All rights reserved.
           </p>
-          <p className="text-white/30 text-xs tracking-wider">
-            Crafted with passion for excellence
+          <p className="text-white/40 text-[10px] sm:text-xs tracking-wider flex items-center gap-1.5">
+            Made with <span className="text-red-400">💝</span> by{' '}
+            <a
+              href="https://chaicodestudio.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#C8A96B] hover:text-[#D4B97A] transition-colors duration-300 font-medium"
+            >
+              ChaiCodeStudio
+            </a>
           </p>
         </div>
       </div>
@@ -150,12 +160,12 @@ export default function Footer() {
       {/* Back to top */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 z-40 w-12 h-12 rounded-full bg-[#C8A96B] text-[#111111] flex items-center justify-center shadow-lg transition-all duration-500 hover:bg-[#D4B97A] ${
+        className={`fixed bottom-6 right-4 sm:bottom-8 sm:right-8 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#C8A96B] text-[#111111] flex items-center justify-center shadow-lg transition-all duration-500 hover:bg-[#D4B97A] ${
           showTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
         }`}
         aria-label="Scroll to top"
       >
-        <ArrowUp size={20} />
+        <ArrowUp size={18} />
       </button>
     </footer>
   );

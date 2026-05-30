@@ -39,10 +39,10 @@ const projects = [
 
 export default function FeaturedProjects() {
   return (
-    <section className="bg-[#111111] py-20 lg:py-32" id="projects">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <section className="bg-[#111111] py-16 sm:py-20 lg:py-32" id="projects">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section header */}
-        <ScrollReveal direction="up" className="text-center mb-16 lg:mb-24">
+        <ScrollReveal direction="up" className="text-center mb-10 sm:mb-16 lg:mb-24">
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="gold-line" />
             <span className="text-[#C8A96B] text-xs tracking-[0.2em] uppercase font-semibold">
@@ -71,10 +71,10 @@ export default function FeaturedProjects() {
             key={project.title}
             direction={project.reverse ? 'right' : 'left'}
             delay={0.1}
-            className="mb-16 lg:mb-28 last:mb-0"
+            className="mb-10 sm:mb-16 lg:mb-28 last:mb-0"
           >
             <div
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center ${
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center ${
                 project.reverse ? 'lg:direction-rtl' : ''
               }`}
               style={{
@@ -82,7 +82,7 @@ export default function FeaturedProjects() {
               }}
             >
               {/* Image */}
-              <div className="relative overflow-hidden aspect-[16/10]" style={{ direction: 'ltr' }}>
+              <div className="relative overflow-hidden aspect-[16/10] sm:aspect-[16/10]" style={{ direction: 'ltr' }}>
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -92,7 +92,7 @@ export default function FeaturedProjects() {
                   quality={90}
                 />
                 {/* Status badge */}
-                <div className="absolute top-6 left-6 z-10">
+                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-10">
                   <span
                     className="inline-flex items-center px-4 py-1.5 text-xs tracking-[0.15em] uppercase font-semibold rounded-full"
                     style={{

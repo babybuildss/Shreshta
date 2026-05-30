@@ -58,13 +58,13 @@ export default function ConstructionExcellence() {
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-start">
           {/* Timeline */}
           <div className="relative">
             {/* Vertical line */}
             <div className="absolute left-[15px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#C8A96B] via-[#C8A96B]/30 to-[#C8A96B]" />
 
-            <div className="space-y-12 lg:space-y-16">
+            <div className="space-y-8 sm:space-y-12 lg:space-y-16">
               {timelineSteps.map((step, index) => (
                 <ScrollReveal
                   key={step.title}
@@ -103,7 +103,7 @@ export default function ConstructionExcellence() {
           </div>
 
           {/* Images */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             <ScrollReveal direction="right" delay={0.2}>
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image

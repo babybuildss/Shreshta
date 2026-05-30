@@ -32,7 +32,7 @@ export default function ContactSection() {
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
           {/* Left panel — 40% */}
-          <div className="lg:col-span-2 bg-[#1A1A1A] p-10 lg:p-16 flex flex-col justify-center">
+          <div className="lg:col-span-2 bg-[#1A1A1A] p-6 sm:p-8 lg:p-16 flex flex-col justify-center">
             <ScrollReveal direction="left">
               <div className="flex items-center gap-4 mb-6">
                 <div className="gold-line" />
@@ -107,7 +107,7 @@ export default function ContactSection() {
           </div>
 
           {/* Right panel — 60% */}
-          <div className="lg:col-span-3 bg-[#FAF9F6] p-10 lg:p-16">
+          <div className="lg:col-span-3 bg-[#FAF9F6] p-6 sm:p-8 lg:p-16">
             <ScrollReveal direction="right">
               {submitted ? (
                 <div className="flex items-center justify-center h-full">
@@ -127,7 +127,7 @@ export default function ContactSection() {
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-8">
+                <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-8">
                   <h3
                     className="text-[#1A1A1A] font-semibold text-2xl mb-8"
                     style={{ fontFamily: "'Manrope', sans-serif" }}
@@ -135,7 +135,7 @@ export default function ContactSection() {
                     Schedule a Consultation
                   </h3>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-8">
                     <div>
                       <label htmlFor="name" className={labelClasses}>
                         Full Name
@@ -166,7 +166,7 @@ export default function ContactSection() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-8">
                     <div>
                       <label htmlFor="phone" className={labelClasses}>
                         Phone Number
