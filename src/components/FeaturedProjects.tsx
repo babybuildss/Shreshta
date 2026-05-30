@@ -89,6 +89,7 @@ export default function FeaturedProjects() {
                   fill
                   className="object-cover transition-transform duration-700 hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={90}
                 />
                 {/* Status badge */}
                 <div className="absolute top-6 left-6 z-10">

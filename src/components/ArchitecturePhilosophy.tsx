@@ -39,6 +39,7 @@ export default function ArchitecturePhilosophy() {
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 60vw"
+                quality={90}
               />
               {/* Gold accent corner */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#C8A96B] to-transparent" />

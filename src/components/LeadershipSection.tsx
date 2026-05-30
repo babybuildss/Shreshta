@@ -23,8 +23,8 @@ const leaders = [
     title: 'Chief Architect',
     description:
       'Vikram brings international architectural expertise, having designed landmark projects across Asia and Europe.',
-    image: '/images/luxury-interior-3.jpg',
-    isAbstract: true,
+    image: '/images/leader-3.jpg',
+    isAbstract: false,
   },
 ];
 
@@ -72,6 +72,7 @@ export default function LeadershipSection() {
                       leader.isAbstract ? 'object-top' : 'object-top'
                     }`}
                     sizes="(max-width: 768px) 100vw, 33vw"
+                    quality={90}
                   />
                   {/* Gold accent */}
                   <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#C8A96B] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

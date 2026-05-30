@@ -5,28 +5,15 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import { ChevronDown } from 'lucide-react';
 
-// ALL uploaded images used in hero slideshow for maximum visual impact
+// ONLY the 7 best premium images — ultra high quality, curated for hero
 const heroSlides = [
-  { src: '/images/hero-1.jpg', alt: 'Luxury modern architecture tower' },
-  { src: '/images/hero-2.jpg', alt: 'Premium residential exterior facade' },
-  { src: '/images/hero-3.jpg', alt: 'Elegant building facade' },
-  { src: '/images/featured-1.jpg', alt: 'Shreshta Royal Residences' },
-  { src: '/images/featured-2.jpg', alt: 'The Sapphire Towers' },
-  { src: '/images/featured-3.jpg', alt: 'Shreshta Riviera Villas' },
-  { src: '/images/hero-bg.jpg', alt: 'Luxury residential skyline' },
-  { src: '/images/luxury-interior-1.jpg', alt: 'Premium interior living' },
-  { src: '/images/luxury-interior-2.jpg', alt: 'Designer interior space' },
-  { src: '/images/luxury-interior-3.jpg', alt: 'Grand interior design' },
-  { src: '/images/lifestyle-1.jpg', alt: 'Luxury community living' },
-  { src: '/images/lifestyle-2.jpg', alt: 'Premium lifestyle experience' },
-  { src: '/images/construction-1.jpg', alt: 'Construction excellence' },
-  { src: '/images/ameneties-1.jpg', alt: 'World-class amenities' },
-  { src: '/images/amenity-pool.jpg', alt: 'Infinity pool experience' },
-  { src: '/images/amenity-clubhouse.jpg', alt: 'Grand clubhouse' },
-  { src: '/images/amenity-gym.jpg', alt: 'Premium fitness center' },
-  { src: '/images/amenity-garden.jpg', alt: 'Landscaped gardens' },
-  { src: '/images/leader-1.jpg', alt: 'Leadership excellence' },
-  { src: '/images/leader-2.jpg', alt: 'Executive team' },
+  { src: '/images/exterior-1.jpg', alt: 'Ultra-luxury mansion exterior with grand entrance' },
+  { src: '/images/exterior-2.jpg', alt: 'World-class luxury estate with reflecting pool' },
+  { src: '/images/exterior-3.jpg', alt: 'Modern residential tower at golden hour' },
+  { src: '/images/exterior-4.jpg', alt: 'Beachfront villa with infinity pool overlooking ocean' },
+  { src: '/images/featured-1.jpg', alt: 'Shreshta Royal Residences Mumbai' },
+  { src: '/images/featured-2.jpg', alt: 'The Sapphire Towers Bangalore' },
+  { src: '/images/featured-3.jpg', alt: 'Shreshta Riviera Villas Goa' },
 ];
 
 export default function HeroSection() {
@@ -38,15 +25,15 @@ export default function HeroSection() {
   const mousePos = useRef({ x: 0, y: 0 });
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
-    const x = (e.clientX / window.innerWidth - 0.5) * 20;
-    const y = (e.clientY / window.innerHeight - 0.5) * 20;
+    const x = (e.clientX / window.innerWidth - 0.5) * 15;
+    const y = (e.clientY / window.innerHeight - 0.5) * 15;
     mousePos.current = { x, y };
     const imgs = containerRef.current?.querySelectorAll('.hero-parallax-img');
     imgs?.forEach((img) => {
       gsap.to(img, {
         x: mousePos.current.x,
         y: mousePos.current.y,
-        duration: 1,
+        duration: 1.2,
         ease: 'power2.out',
       });
     });
@@ -60,9 +47,9 @@ export default function HeroSection() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, [handleMouseMove]);
 
+  // Entrance animation
   useEffect(() => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
     const tl = gsap.timeline({ delay: 0.3 });
 
     if (prefersReduced) {
@@ -91,6 +78,7 @@ export default function HeroSection() {
       );
   }, []);
 
+  // Auto-sliding — 5 second interval
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % heroSlides.length);
@@ -104,7 +92,7 @@ export default function HeroSection() {
       className="relative w-full h-screen overflow-hidden bg-[#111111]"
       id="hero"
     >
-      {/* Slideshow — all 20 images */}
+      {/* Auto-slideshow — 7 premium images */}
       {heroSlides.map((slide, index) => (
         <div
           key={index}
@@ -125,10 +113,25 @@ export default function HeroSection() {
       ))}
 
       {/* Dark overlay gradient for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10" />
+      {/* Side vignettes for cinematic feel */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6">
+        {/* Small label above title */}
+        <div
+          ref={subtitleRef}
+          className="mb-4 sm:mb-6"
+        >
+          <span
+            className="inline-block px-4 py-1.5 text-[10px] sm:text-xs tracking-[0.25em] uppercase font-medium border border-[#C8A96B]/30 text-[#C8A96B]/80"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
+            Shreshta Developers &mdash; Est. 2005
+          </span>
+        </div>
+
         <h1
           ref={titleRef}
           className="text-white font-extrabold leading-[0.95] tracking-tighter max-w-5xl"
@@ -144,9 +147,23 @@ export default function HeroSection() {
         </h1>
 
         <p
-          ref={subtitleRef}
           className="mt-4 sm:mt-6 md:mt-8 text-white/70 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed"
-          style={{ fontFamily: "'Inter', sans-serif" }}
+          style={{ fontFamily: "'Inter', sans-serif", opacity: 0 }}
+          ref={(el) => {
+            if (el) {
+              el.style.opacity = '0';
+              // Use GSAP to animate
+              const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+              if (prefersReduced) {
+                el.style.opacity = '1';
+              } else {
+                gsap.fromTo(el,
+                  { opacity: 0, y: 40 },
+                  { opacity: 1, y: 0, duration: 1, ease: 'power3.out', delay: 0.8 }
+                );
+              }
+            }
+          }}
         >
           Building timeless destinations designed for future generations.
         </p>
@@ -161,19 +178,37 @@ export default function HeroSection() {
         </a>
       </div>
 
-      {/* Slide counter dots */}
-      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2">
-        <span className="text-white/40 text-xs mr-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+      {/* Slide progress dots */}
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3">
+        {heroSlides.map((_, index) => (
+          <button
+            key={index}
+            className={`transition-all duration-500 ${
+              index === activeSlide
+                ? 'w-8 h-2 rounded-full bg-[#C8A96B]'
+                : 'w-2 h-2 rounded-full bg-white/30 hover:bg-white/50'
+            }`}
+            onClick={() => setActiveSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
+      {/* Slide counter */}
+      <div className="absolute bottom-[5.5rem] right-6 sm:right-10 z-10 flex items-center gap-1">
+        <span className="text-[#C8A96B] text-sm font-semibold" style={{ fontFamily: "'Inter', sans-serif" }}>
           {String(activeSlide + 1).padStart(2, '0')}
         </span>
-        <span className="text-white/20 text-xs" style={{ fontFamily: "'Inter', sans-serif" }}>
+        <span className="text-white/30 text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
           / {String(heroSlides.length).padStart(2, '0')}
         </span>
       </div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-        <span className="text-white/40 text-[10px] sm:text-xs tracking-[0.2em] uppercase">Scroll</span>
+        <span className="text-white/40 text-[10px] sm:text-xs tracking-[0.2em] uppercase" style={{ fontFamily: "'Inter', sans-serif" }}>
+          Scroll
+        </span>
         <div className="animate-bounce">
           <ChevronDown className="text-[#C8A96B]" size={20} />
         </div>

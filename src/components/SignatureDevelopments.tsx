@@ -12,31 +12,31 @@ const developments = [
   {
     title: 'Shreshta Horizon',
     location: 'Pune, Maharashtra',
-    image: '/images/featured-1.jpg',
+    image: '/images/exterior-1.jpg',
     slug: 'horizon',
   },
   {
     title: 'The Grand Meridian',
     location: 'Hyderabad, Telangana',
-    image: '/images/luxury-interior-1.jpg',
+    image: '/images/exterior-2.jpg',
     slug: 'grand-meridian',
   },
   {
     title: 'Shreshta Waterfront',
     location: 'Kochi, Kerala',
-    image: '/images/hero-bg.jpg',
+    image: '/images/exterior-3.jpg',
     slug: 'waterfront',
   },
   {
     title: 'The Ivory Heights',
     location: 'Delhi NCR',
-    image: '/images/luxury-interior-2.jpg',
+    image: '/images/exterior-4.jpg',
     slug: 'ivory-heights',
   },
   {
     title: 'Shreshta Palm Villas',
     location: 'Chennai, Tamil Nadu',
-    image: '/images/lifestyle-1.jpg',
+    image: '/images/hero-bg.jpg',
     slug: 'palm-villas',
   },
 ];
@@ -126,6 +126,7 @@ export default function SignatureDevelopments() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="40vw"
+                quality={90}
               />
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />

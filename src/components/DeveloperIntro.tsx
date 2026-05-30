@@ -19,11 +19,12 @@ export default function DeveloperIntro() {
           <ScrollReveal direction="left" duration={1.2}>
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
-                src="/images/hero-bg.jpg"
+                src="/images/exterior-2.jpg"
                 alt="Shreshta luxury development"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={90}
               />
               {/* Gold accent frame */}
               <div className="absolute top-6 left-6 w-20 h-20 border-t-2 border-l-2 border-[#C8A96B]" />

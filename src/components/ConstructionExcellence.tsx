@@ -112,6 +112,7 @@ export default function ConstructionExcellence() {
                   fill
                   className="object-cover transition-transform duration-700 hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={90}
                 />
               </div>
             </ScrollReveal>
@@ -123,6 +124,7 @@ export default function ConstructionExcellence() {
                   fill
                   className="object-cover transition-transform duration-700 hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={90}
                 />
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#C8A96B] to-transparent" />
               </div>

@@ -17,6 +17,7 @@ export default function LifestyleSection() {
                 fill
                 className="object-cover"
                 sizes="50vw"
+                quality={90}
               />
             </div>
           </ScrollReveal>
@@ -32,6 +33,7 @@ export default function LifestyleSection() {
                 fill
                 className="object-cover"
                 sizes="50vw"
+                quality={90}
               />
             </div>
           </ScrollReveal>
