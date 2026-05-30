@@ -5,15 +5,14 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import { ChevronDown } from 'lucide-react';
 
-// ONLY the 7 best premium images — ultra high quality, curated for hero
+// 6 premium AI-generated exterior images — ultra high quality, DLF/Lodha/Emaar level
 const heroSlides = [
-  { src: '/images/exterior-1.jpg', alt: 'Ultra-luxury mansion exterior with grand entrance' },
-  { src: '/images/exterior-2.jpg', alt: 'World-class luxury estate with reflecting pool' },
-  { src: '/images/exterior-3.jpg', alt: 'Modern residential tower at golden hour' },
-  { src: '/images/exterior-4.jpg', alt: 'Beachfront villa with infinity pool overlooking ocean' },
-  { src: '/images/featured-1.jpg', alt: 'Shreshta Royal Residences Mumbai' },
-  { src: '/images/featured-2.jpg', alt: 'The Sapphire Towers Bangalore' },
-  { src: '/images/featured-3.jpg', alt: 'Shreshta Riviera Villas Goa' },
+  { src: '/images/hero-exterior-1.jpg', alt: 'Mediterranean luxury mansion with grand entrance and stone facade' },
+  { src: '/images/hero-exterior-2.jpg', alt: 'World-class luxury estate with limestone marble and reflecting pool' },
+  { src: '/images/hero-exterior-3.jpg', alt: 'Ultra-modern glass and steel villa with infinity pool' },
+  { src: '/images/hero-exterior-4.jpg', alt: 'Luxury high-rise residential tower with glass curtain wall' },
+  { src: '/images/hero-exterior-5.jpg', alt: 'Grand colonial luxury mansion with fountain driveway' },
+  { src: '/images/hero-exterior-6.jpg', alt: 'Ultra-luxury waterfront villa with infinity pool and ocean view' },
 ];
 
 export default function HeroSection() {
@@ -92,7 +91,7 @@ export default function HeroSection() {
       className="relative w-full h-screen overflow-hidden bg-[#111111]"
       id="hero"
     >
-      {/* Auto-slideshow — 7 premium images */}
+      {/* Auto-slideshow — 6 premium AI-generated exterior images */}
       {heroSlides.map((slide, index) => (
         <div
           key={index}
